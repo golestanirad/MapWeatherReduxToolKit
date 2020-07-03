@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  margin: 4px 0;
+  border-radius: 100px;
+  .algolia{  
+    border-radius: 100px;
+  }
+}
