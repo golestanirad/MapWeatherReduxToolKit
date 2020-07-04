@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MapWeather-ReduxToolKit/static/css/main.e9b1237a.chunk.css",
-    "main.js": "/MapWeather-ReduxToolKit/static/js/main.fc361852.chunk.js",
-    "main.js.map": "/MapWeather-ReduxToolKit/static/js/main.fc361852.chunk.js.map",
-    "runtime-main.js": "/MapWeather-ReduxToolKit/static/js/runtime-main.fba9564c.js",
-    "runtime-main.js.map": "/MapWeather-ReduxToolKit/static/js/runtime-main.fba9564c.js.map",
-    "static/js/2.5530b17a.chunk.js": "/MapWeather-ReduxToolKit/static/js/2.5530b17a.chunk.js",
-    "static/js/2.5530b17a.chunk.js.map": "/MapWeather-ReduxToolKit/static/js/2.5530b17a.chunk.js.map",
-    "index.html": "/MapWeather-ReduxToolKit/index.html",
-    "precache-manifest.45937c93e94c99c7f40847f069bd7cfa.js": "/MapWeather-ReduxToolKit/precache-manifest.45937c93e94c99c7f40847f069bd7cfa.js",
-    "service-worker.js": "/MapWeather-ReduxToolKit/service-worker.js",
-    "static/css/main.e9b1237a.chunk.css.map": "/MapWeather-ReduxToolKit/static/css/main.e9b1237a.chunk.css.map",
-    "static/js/2.5530b17a.chunk.js.LICENSE.txt": "/MapWeather-ReduxToolKit/static/js/2.5530b17a.chunk.js.LICENSE.txt"
+    "main.css": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css",
+    "main.js": "/MapWeatherReduxToolKit/static/js/main.fc361852.chunk.js",
+    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.fc361852.chunk.js.map",
+    "runtime-main.js": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js",
+    "runtime-main.js.map": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js.map",
+    "static/js/2.5530b17a.chunk.js": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js",
+    "static/js/2.5530b17a.chunk.js.map": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js.map",
+    "index.html": "/MapWeatherReduxToolKit/index.html",
+    "precache-manifest.f60439440320cf83e7f44b2b7ddbe62f.js": "/MapWeatherReduxToolKit/precache-manifest.f60439440320cf83e7f44b2b7ddbe62f.js",
+    "service-worker.js": "/MapWeatherReduxToolKit/service-worker.js",
+    "static/css/main.e9b1237a.chunk.css.map": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css.map",
+    "static/js/2.5530b17a.chunk.js.LICENSE.txt": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fba9564c.js",
+    "static/js/runtime-main.78ef3a93.js",
     "static/js/2.5530b17a.chunk.js",
     "static/css/main.e9b1237a.chunk.css",
     "static/js/main.fc361852.chunk.js"
