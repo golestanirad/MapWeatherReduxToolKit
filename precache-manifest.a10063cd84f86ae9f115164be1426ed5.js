@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88761ce8fd8a3787c43171aebbaa754f",
+    "revision": "8835b4135024ebd7f7a007a99bad0bac",
     "url": "/MapWeatherReduxToolKit/index.html"
   },
   {
-    "revision": "21761a86123370234e74",
+    "revision": "10461144c4dfa66d607c",
     "url": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MapWeatherReduxToolKit/static/js/2.0892fe03.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "21761a86123370234e74",
-    "url": "/MapWeatherReduxToolKit/static/js/main.50275e62.chunk.js"
+    "revision": "10461144c4dfa66d607c",
+    "url": "/MapWeatherReduxToolKit/static/js/main.4f3153fd.chunk.js"
   },
   {
     "revision": "8b53b50bdf66b451eba2",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css",
-    "main.js": "/MapWeatherReduxToolKit/static/js/main.50275e62.chunk.js",
-    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.50275e62.chunk.js.map",
+    "main.js": "/MapWeatherReduxToolKit/static/js/main.4f3153fd.chunk.js",
+    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.4f3153fd.chunk.js.map",
     "runtime-main.js": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js",
     "runtime-main.js.map": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js.map",
     "static/js/2.0892fe03.chunk.js": "/MapWeatherReduxToolKit/static/js/2.0892fe03.chunk.js",
     "static/js/2.0892fe03.chunk.js.map": "/MapWeatherReduxToolKit/static/js/2.0892fe03.chunk.js.map",
     "index.html": "/MapWeatherReduxToolKit/index.html",
-    "precache-manifest.8b743cd26f789a2d78d780ff80a4f49c.js": "/MapWeatherReduxToolKit/precache-manifest.8b743cd26f789a2d78d780ff80a4f49c.js",
+    "precache-manifest.a10063cd84f86ae9f115164be1426ed5.js": "/MapWeatherReduxToolKit/precache-manifest.a10063cd84f86ae9f115164be1426ed5.js",
     "service-worker.js": "/MapWeatherReduxToolKit/service-worker.js",
     "static/css/main.e9b1237a.chunk.css.map": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css.map",
     "static/js/2.0892fe03.chunk.js.LICENSE.txt": "/MapWeatherReduxToolKit/static/js/2.0892fe03.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.78ef3a93.js",
     "static/js/2.0892fe03.chunk.js",
     "static/css/main.e9b1237a.chunk.css",
-    "static/js/main.50275e62.chunk.js"
+    "static/js/main.4f3153fd.chunk.js"
   ]
 }
