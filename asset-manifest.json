@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css",
-    "main.js": "/MapWeatherReduxToolKit/static/js/main.1e0e2c7a.chunk.js",
-    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.1e0e2c7a.chunk.js.map",
+    "main.css": "/MapWeatherReduxToolKit/static/css/main.b32736e5.chunk.css",
+    "main.js": "/MapWeatherReduxToolKit/static/js/main.fb5a8f2b.chunk.js",
+    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.fb5a8f2b.chunk.js.map",
     "runtime-main.js": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js",
     "runtime-main.js.map": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js.map",
     "static/js/2.5530b17a.chunk.js": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js",
     "static/js/2.5530b17a.chunk.js.map": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js.map",
     "index.html": "/MapWeatherReduxToolKit/index.html",
-    "precache-manifest.0e087d22f756279495dedcb643b3250d.js": "/MapWeatherReduxToolKit/precache-manifest.0e087d22f756279495dedcb643b3250d.js",
+    "precache-manifest.858f432b939eefc3bee15e8a238e6280.js": "/MapWeatherReduxToolKit/precache-manifest.858f432b939eefc3bee15e8a238e6280.js",
     "service-worker.js": "/MapWeatherReduxToolKit/service-worker.js",
-    "static/css/main.e9b1237a.chunk.css.map": "/MapWeatherReduxToolKit/static/css/main.e9b1237a.chunk.css.map",
+    "static/css/main.b32736e5.chunk.css.map": "/MapWeatherReduxToolKit/static/css/main.b32736e5.chunk.css.map",
     "static/js/2.5530b17a.chunk.js.LICENSE.txt": "/MapWeatherReduxToolKit/static/js/2.5530b17a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.78ef3a93.js",
     "static/js/2.5530b17a.chunk.js",
-    "static/css/main.e9b1237a.chunk.css",
-    "static/js/main.1e0e2c7a.chunk.js"
+    "static/css/main.b32736e5.chunk.css",
+    "static/js/main.fb5a8f2b.chunk.js"
   ]
 }
