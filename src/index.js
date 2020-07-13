@@ -10,7 +10,7 @@ import "leaflet-control-geocoder/dist/Control.Geocoder.js";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <TestCode />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -4,15 +4,20 @@ import styles from "./forecast-card.module.scss";
 
 const ForecastCard = (props) => {
   /// Props
-  const { icon, temp, timeOfDay } = props;
+  const { icon, temp, timeOfDay, description } = props;
+  var noneSunnyWordsReg = /(Snow|Rain|Drizzle|Thunderstorm|Sleet)/i;
+  const isRainy = noneSunnyWordsReg.test(description);
   /// Return
   return (
-    <div className={styles.container} >
+    <div
+      className={styles.container}
+      style={{ backgroundColor: isRainy ? "lightBlue" : "#f6f467" }}
+    >
       <span>{timeOfDay}</span>
-      <span>{temp}</span>
+      <span>{temp} &#8451;</span>
 
       <img
-        className={styles.icon}      
+        className={styles.icon}
         src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
         alt="weather icon"
       />

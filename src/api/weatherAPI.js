@@ -28,8 +28,7 @@ export const fetchFavoriteLocations = (uid) => {
       .collection("users")
       .doc(uid)
       .collection("favorites")
-      .get();
-    console.log("promiseeeeeeee", promise);
+      .get();  
     return promise;
   } catch (error) {
     console.log("errorrrrrr", error);

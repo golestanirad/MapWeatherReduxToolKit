@@ -24,7 +24,7 @@ const App = () => {
         dispatch(getWeather(latitude, longitude));
       }
     );
-  },[]);
+  }, []);
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
@@ -42,7 +42,7 @@ const App = () => {
 
   /// Return
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -86,4 +86,7 @@ export default App;
 //// 27) BUG - after logging in, the  slected location won't turn into favorite - DONE
 //// BUG 28)  after adding a new one all colapsed ones will open again - DONE
 ///// 29) remove libs that you don't need
-///// 30) go on react-native ........... :)
+///// 30) go on react-native 
+////// 31) change time to 2am, 8pm - DONE
+////// 32) yellow = no rain, blue rainny - DONE
+////// 33) remove 12am to 6am ........

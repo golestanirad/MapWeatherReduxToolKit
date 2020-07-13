@@ -16,7 +16,7 @@ import Paper from "@material-ui/core/Paper";
 const useStyles = makeStyles({
   table: {},
   row: {
-    border: "2px solid gray",
+    borderTop: "1px solid lightGray",
   },
   cell: {
     maxWidth: "35px",
@@ -58,8 +58,12 @@ const ForecastWeather = ({ location }) => {
   const createForecaseData = (forecast) => {
     const trimedForecastData = [];
     forecast.map((item) => {
+      console.log("item", item);
+      const timeOfDay = converUnixTime(item.dt, timezone, "hh A");
+      const morningTimesToBeIgnored = /(12 AM|01 AM|02 AM|03 AM|04 AM|05 AM|06 AM)/i;
+      if (morningTimesToBeIgnored.test(timeOfDay)) return;
+
       const dayOfWeek = converUnixTime(item.dt, timezone, "ddd");
-      const timeOfDay = converUnixTime(item.dt, timezone, "HH:MM");
       const dayOfMonth = converUnixTime(item.dt, timezone, "MMM/DD");
       const timeSlice = {};
       timeSlice["temp"] = Math.round(item.temp);
@@ -67,14 +71,14 @@ const ForecastWeather = ({ location }) => {
       timeSlice["dayOfWeek"] = dayOfWeek;
       timeSlice["timeOfDay"] = timeOfDay;
       timeSlice["dayOfMonth"] = dayOfMonth;
+      timeSlice["description"] = item.description;
       trimedForecastData.push(timeSlice);
     });
-
 
     let day = trimedForecastData[0].dayOfWeek;
     const finalForcastData = [];
     let daySlice = {};
-    let whichForecast = 9;
+    let whichForecast = 7;
     trimedForecastData.map((item) => {
       if (item.dayOfWeek === day) whichForecast--;
     });
@@ -94,6 +98,7 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
@@ -102,6 +107,7 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
@@ -110,6 +116,7 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
@@ -118,6 +125,7 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
@@ -126,6 +134,7 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
@@ -134,106 +143,39 @@ const ForecastWeather = ({ location }) => {
             temp: item.temp,
             icon: item.icon,
             timeOfDay: item.timeOfDay,
+            description: item.description,
           };
           whichForecast++;
           break;
-        case 7:
-          daySlice["seventhForecast"] = {
-            temp: item.temp,
-            icon: item.icon,
-            timeOfDay: item.timeOfDay,
-          };
-          whichForecast++;
-          break;
-        case 8:
-          daySlice["eighthForecast"] = {
-            temp: item.temp,
-            icon: item.icon,
-            timeOfDay: item.timeOfDay,
-          };
-          whichForecast++;
-          break;
+        // case 7:
+        //   daySlice["seventhForecast"] = {
+        //     temp: item.temp,
+        //     icon: item.icon,
+        //     timeOfDay: item.timeOfDay,
+        //     description: item.description,
+        //   };
+        //   whichForecast++;
+        //   break;
+        // case 8:
+        //   daySlice["eighthForecast"] = {
+        //     temp: item.temp,
+        //     icon: item.icon,
+        //     timeOfDay: item.timeOfDay,
+        //     description: item.description,
+        //   };
+        //   whichForecast++;  
+        //   break;
       }
-      //   if (whichForecast === 1) {
-      //     daySlice["firstForecast"] = {
-      //       temp: item.temp,
-      //       icon: item.icon,
-      //       timeOfDay: item.timeOfDay,
-      //     };
-      //     whichForecast++;
-      //   } else {
-      //     if (whichForecast === 2) {
-      //       daySlice["secondForecast"] = {
-      //         temp: item.temp,
-      //         icon: item.icon,
-      //         timeOfDay: item.timeOfDay,
-      //       };
-      //       whichForecast++;
-      //     } else {
-      //       if (whichForecast === 3) {
-      //         daySlice["thirdForecast"] = {
-      //           temp: item.temp,
-      //           icon: item.icon,
-      //           timeOfDay: item.timeOfDay,
-      //         };
-      //         whichForecast++;
-      //       } else {
-      //         if (whichForecast === 4) {
-      //           daySlice["fourthForecast"] = {
-      //             temp: item.temp,
-      //             icon: item.icon,
-      //             timeOfDay: item.timeOfDay,
-      //           };
-      //           whichForecast++;
-      //         } else {
-      //           if (whichForecast === 5) {
-      //             daySlice["fifthForecast"] = {
-      //               temp: item.temp,
-      //               icon: item.icon,
-      //               timeOfDay: item.timeOfDay,
-      //             };
-      //             whichForecast++;
-      //           } else {
-      //             if (whichForecast === 6) {
-      //               daySlice["sixthForecast"] = {
-      //                 temp: item.temp,
-      //                 icon: item.icon,
-      //                 timeOfDay: item.timeOfDay,
-      //               };
-      //               whichForecast++;
-      //             } else {
-      //               if (whichForecast === 7) {
-      //                 daySlice["seventhForecast"] = {
-      //                   temp: item.temp,
-      //                   icon: item.icon,
-      //                   timeOfDay: item.timeOfDay,
-      //                 };
-      //                 whichForecast++;
-      //               } else {
-      //                 if (whichForecast === 8) {
-      //                   daySlice["eighthForecast"] = {
-      //                     temp: item.temp,
-      //                     icon: item.icon,
-      //                     timeOfDay: item.timeOfDay,
-      //                   };
-      //                   whichForecast++;
-      //                 }
-      //               }
-      //             }
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
     });
-   
+    console.log("finalForcastData", finalForcastData);
     return finalForcastData;
   };
 
   return (
     <TableContainer component={Paper} className={classes.table}>
-      <Table size="small" aria-label="a dense table">
-        <TableBody style={{ width: "100px" }}>
+      <Table size="small" aria-label="forecast weather table">
+        {/* <TableBody style={{ width: "100px" }}> */}
+        <TableBody>
           {createForecaseData(forecast).map((row) => (
             <TableRow className={classes.row} key={shortID.generate()}>
               <TableCell className={classes.cell} align="right">
@@ -243,14 +185,14 @@ const ForecastWeather = ({ location }) => {
                 </div>
               </TableCell>
               {[
-                "firstForecast",
-                "secondForecast",
+               "firstForecast",
+               "secondForecast",
                 "thirdForecast",
                 "fourthForecast",
                 "fifthForecast",
                 "sixthForecast",
-                "seventhForecast",
-                "eighthForecast",
+                // "seventhForecast",
+                // "eighthForecast",
               ].map((forcasetSlice) => (
                 <TableCell
                   key={shortID.generate()}
@@ -262,6 +204,7 @@ const ForecastWeather = ({ location }) => {
                       timeOfDay={row[forcasetSlice].timeOfDay}
                       temp={row[forcasetSlice].temp}
                       icon={row[forcasetSlice].icon}
+                      description={row[forcasetSlice].description}
                     />
                   )}
                 </TableCell>
