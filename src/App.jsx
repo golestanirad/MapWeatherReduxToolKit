@@ -89,4 +89,4 @@ export default App;
 ///// 30) go on react-native 
 ////// 31) change time to 2am, 8pm - DONE
 ////// 32) yellow = no rain, blue rainny - DONE
-////// 33) remove 12am to 6am ........
+////// 33) remove 12am to 6am - DONE

@@ -57,10 +57,11 @@ const ForecastWeather = ({ location }) => {
   ////Helpers
   const createForecaseData = (forecast) => {
     const trimedForecastData = [];
+    console.log("forecast",forecast)
     forecast.map((item) => {
-      console.log("item", item);
+     
       const timeOfDay = converUnixTime(item.dt, timezone, "hh A");
-      const morningTimesToBeIgnored = /(12 AM|01 AM|02 AM|03 AM|04 AM|05 AM|06 AM)/i;
+      const morningTimesToBeIgnored = /(12 AM|01 AM|02 AM|03 AM|04 AM|05 AM)/i;
       if (morningTimesToBeIgnored.test(timeOfDay)) return;
 
       const dayOfWeek = converUnixTime(item.dt, timezone, "ddd");
