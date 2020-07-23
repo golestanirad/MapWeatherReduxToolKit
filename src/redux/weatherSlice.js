@@ -95,19 +95,24 @@ const weather = createSlice({
       state.isLoading = true;
     },
     initialFavoritesFetchSuccess(state, action) {
-      state.isLoading = false;
-      state.weatherLocations = { ...state.weatherLocations, ...action.payload };
-      state.favorites = Object.keys(action.payload);
+      state.isLoading = false;     
+      if (Object.keys(action.payload).length > 0) {
+        state.weatherLocations = {
+          ...state.weatherLocations,
+          ...action.payload,
+        };
+        state.favorites = Object.keys(action.payload);
 
-      const locationsName = Object.keys(action.payload);
-      locationsName.map((locationName) => {
-        if (!state.visible.includes(locationName)) {
-          state.visible.push(locationName);
-        }
-        if (!state.expanded.includes(locationName)) {
-          state.expanded.push(locationName);
-        }
-      });
+        const locationsName = Object.keys(action.payload);
+        locationsName.map((locationName) => {
+          if (!state.visible.includes(locationName)) {
+            state.visible.push(locationName);
+          }
+          if (!state.expanded.includes(locationName)) {
+            state.expanded.push(locationName);
+          }
+        });
+      }
     },
     initialFavoritesFetchFailure(state, action) {
       state.isLoading = false;
@@ -209,17 +214,16 @@ export const initialFavoritesFetch = (uid) => async (dispatch) => {
         favoriteLocationsLatLng
       );
 
+      const finalWeatherDataForFavoriteLocations = {};
       if (weatherOfFavoriteLocations.length > 0) {
-        const finalWeatherDataForFavoriteLocations = {};
         weatherOfFavoriteLocations.forEach(({ current, forecast }) => {
           const weatherData = makeWeatherData(current, forecast);
           Object.assign(finalWeatherDataForFavoriteLocations, weatherData);
         });
-
-        dispatch(
-          initialFavoritesFetchSuccess(finalWeatherDataForFavoriteLocations)
-        );
       }
+      dispatch(
+        initialFavoritesFetchSuccess(finalWeatherDataForFavoriteLocations)
+      );
     } else {
       ///
     }

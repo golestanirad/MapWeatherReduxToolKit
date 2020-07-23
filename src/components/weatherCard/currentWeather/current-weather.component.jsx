@@ -1,21 +1,20 @@
 import React from "react";
 import _ from "lodash";
+import moment from "moment-timezone";
 /// project files
 import styles from "./current-weather.module.scss";
 import { converUnixTime } from "../../../utils/time";
 
-const CurrentWeather = ({location}) => {
+const CurrentWeather = ({ location }) => {
   //// Props
-  const { current,  timezone } = location;
-  const {
-    dt,
-    description,   
-     temp ,
-     icon
-  } = current;
+  const { current, timezone } = location;
+  const { dt, description, temp, icon } = current;
   ///// Helpers
 
-  const time = converUnixTime(dt, timezone, "DD/MM/YYYY HH:MM");
+  const time = converUnixTime(dt, timezone, "hh:mm A");
+  console.log("dtttt", dt);
+  console.log("timezone", timezone);
+  console.log("moment", moment.unix(dt).format("DD/MM/YYYY hh:mm A"));
   ///// Return
   return (
     <div className={styles.container}>

@@ -57,7 +57,6 @@ const ForecastWeather = ({ location }) => {
   ////Helpers
   const createForecaseData = (forecast) => {
     const trimedForecastData = [];
-    console.log("forecast",forecast)
     forecast.map((item) => {
      
       const timeOfDay = converUnixTime(item.dt, timezone, "hh A");
@@ -168,7 +167,6 @@ const ForecastWeather = ({ location }) => {
         //   break;
       }
     });
-    console.log("finalForcastData", finalForcastData);
     return finalForcastData;
   };
 

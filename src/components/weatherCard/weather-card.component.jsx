@@ -22,7 +22,7 @@ const WeatherCard = (props) => {
   ///// Props
   const { location, locationID } = props;
   const { locationName } = location;
-
+console.log(6666666666,locationName)
   //// Hooks
   const dispatch = useDispatch();
 
@@ -34,7 +34,6 @@ const WeatherCard = (props) => {
   const isExpanded = useSelector((state) =>
     state.weather.expanded.includes(locationID)
   );
- 
 
   const [showDialog, setShowDialog] = useState(false);
 
@@ -89,52 +88,44 @@ const WeatherCard = (props) => {
   ///// Return
   return (
     <div className={styles.container}>
-     
-          <AgreeDialog
-            showDialog={showDialog}
-            handleAgree={handleAgree}
-            handleDisagree={handleDisagree}
-            title={" Would you like to login with your Google account?"}
-            content={
-              "In order to save your favorites you need to login so we can save them for you :)"
-            }
-          />
-          <div className={styles.bar}>
-            <Icon
-              className={styles.icon}
-              onClick={handleVisibility}
-              color="primary"
-            >
-              {shouldBeVisible ? "visibility_on" : "visibility_off"}
-            </Icon>
-            <Icon
-              className={styles.icon}
-              onClick={handleExpanding}
-              color="primary"
-            >
-              {isExpanded ? "expand_more" : "expand_less"}
-            </Icon>
-            <span className={styles.name}>{locationName}</span>
-            <Icon className={styles.icon} onClick={handleDeleteClick}>
-              delete-outline
-            </Icon>
-            <Icon
-              className={styles.icon}
-              onClick={handleFavoriteClick}
-              color="secondary"
-            >
-              {favorites.indexOf(locationID) >= 0
-                ? "favorite"
-                : "favorite_border"}
-            </Icon>
-          </div>
-          {isExpanded && (
-            <>
-              <CurrentWeather location={location} />
-              <ForecastWeather location={location} />
-            </>
-          )}
-      
+      <AgreeDialog
+        showDialog={showDialog}
+        handleAgree={handleAgree}
+        handleDisagree={handleDisagree}
+        title={" Would you like to login with your Google account?"}
+        content={
+          "In order to save your favorites you need to login so we can save them for you :)"
+        }
+      />
+      <div className={styles.bar}>
+        <Icon
+          className={styles.icon}
+          onClick={handleVisibility}
+          color="primary"
+        >
+          {shouldBeVisible ? "visibility_on" : "visibility_off"}
+        </Icon>
+        <Icon className={styles.icon} onClick={handleExpanding} color="primary">
+          {isExpanded ? "expand_more" : "expand_less"}
+        </Icon>
+        <span className={styles.name}>{locationName}</span>
+        <Icon
+          className={styles.icon}
+          onClick={handleFavoriteClick}
+          color="secondary"
+        >
+          {favorites.indexOf(locationID) >= 0 ? "favorite" : "favorite_border"}
+        </Icon>
+        <Icon className={styles.icon} onClick={handleDeleteClick}>
+          close
+        </Icon>
+      </div>
+      {isExpanded && (
+        <>
+          <CurrentWeather location={location} />
+          <ForecastWeather location={location} />
+        </>
+      )}
     </div>
   );
 };

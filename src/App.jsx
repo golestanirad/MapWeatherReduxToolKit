@@ -90,3 +90,10 @@ export default App;
 ////// 31) change time to 2am, 8pm - DONE
 ////// 32) yellow = no rain, blue rainny - DONE
 ////// 33) remove 12am to 6am - DONE
+/////// 34) make initial and user-location load at the same time 
+////// 35) css .....
+/*
+35.1) change garnadge-bin to an "X" DONE
+35.2) tage today's row as today not its date
+*/
+//// 36) bug current time is wrong
