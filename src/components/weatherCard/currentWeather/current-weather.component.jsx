@@ -12,9 +12,6 @@ const CurrentWeather = ({ location }) => {
   ///// Helpers
 
   const time = converUnixTime(dt, timezone, "hh:mm A");
-  console.log("dtttt", dt);
-  console.log("timezone", timezone);
-  console.log("moment", moment.unix(dt).format("DD/MM/YYYY hh:mm A"));
   ///// Return
   return (
     <div className={styles.container}>

@@ -96,4 +96,4 @@ export default App;
 35.1) change garnadge-bin to an "X" DONE
 35.2) tage today's row as today not its date
 */
-//// 36) bug current time is wrong
+//// 36) bug current time is wrong - DONE

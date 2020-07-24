@@ -95,7 +95,7 @@ const weather = createSlice({
       state.isLoading = true;
     },
     initialFavoritesFetchSuccess(state, action) {
-      state.isLoading = false;     
+      state.isLoading = false;
       if (Object.keys(action.payload).length > 0) {
         state.weatherLocations = {
           ...state.weatherLocations,

@@ -22,7 +22,7 @@ const WeatherCard = (props) => {
   ///// Props
   const { location, locationID } = props;
   const { locationName } = location;
-console.log(6666666666,locationName)
+
   //// Hooks
   const dispatch = useDispatch();
 
@@ -71,11 +71,10 @@ console.log(6666666666,locationName)
   const handleAgree = () => {
     setShowDialog(false);
     googleSignIn().then((result) => {
-      console.log("result", result);
+    
 
       if (!favorites.includes(locationID)) {
-        console.log("result.user.uid", result.user.uid);
-        console.log("location", location);
+       
         dispatch(addToFavoriteList(result.user.uid, location));
       } else {
         dispatch(removeFromFavoriteList(result.user.uid, location));

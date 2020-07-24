@@ -49,16 +49,16 @@ const useStyles = makeStyles({
 
 const ForecastWeather = ({ location }) => {
   //// Props
-  const { forecast, timezone } = location;
+  const { forecast, timezone, current } = location;
 
   ///// Hooks
   const classes = useStyles();
 
   ////Helpers
+  const dateOfToday = converUnixTime(current.dt, timezone, "MMM/DD");
   const createForecaseData = (forecast) => {
     const trimedForecastData = [];
     forecast.map((item) => {
-     
       const timeOfDay = converUnixTime(item.dt, timezone, "hh A");
       const morningTimesToBeIgnored = /(12 AM|01 AM|02 AM|03 AM|04 AM|05 AM)/i;
       if (morningTimesToBeIgnored.test(timeOfDay)) return;
@@ -163,13 +163,13 @@ const ForecastWeather = ({ location }) => {
         //     timeOfDay: item.timeOfDay,
         //     description: item.description,
         //   };
-        //   whichForecast++;  
+        //   whichForecast++;
         //   break;
       }
     });
     return finalForcastData;
   };
-
+  //////////  Return
   return (
     <TableContainer component={Paper} className={classes.table}>
       <Table size="small" aria-label="forecast weather table">
@@ -179,13 +179,19 @@ const ForecastWeather = ({ location }) => {
             <TableRow className={classes.row} key={shortID.generate()}>
               <TableCell className={classes.cell} align="right">
                 <div className={classes.day}>
-                  <span>{row.dayOfMonth}</span>
-                  <span>{row.day}</span>
+                  {dateOfToday === row.dayOfMonth ? (
+                    "Today"
+                  ) : (
+                    <>
+                      <span>{row.dayOfMonth}</span>
+                      <span>{row.day}</span>
+                    </>
+                  )}
                 </div>
               </TableCell>
               {[
-               "firstForecast",
-               "secondForecast",
+                "firstForecast",
+                "secondForecast",
                 "thirdForecast",
                 "fourthForecast",
                 "fifthForecast",
