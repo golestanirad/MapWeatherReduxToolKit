@@ -3,13 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //// project files
 import "./App.css";
-import Home from "./pages/home/home.component";
+//import Home from "./pages/home/home.component";
+import NewHomePage from "./pages/newHomePage/new-home-page.component";
 import About from "./pages/about/about.component";
 import { currentLocation } from "./redux/mapSlice";
 import { getWeather, initialFavoritesFetch } from "./redux/weatherSlice";
 import { checkUserStatus } from "./redux/userSlice";
 import { auth } from "./firebase/firebase.utils";
 import { fetchFavoriteLocations } from "./api/weatherAPI";
+import AppBar from "./components/appBar/app-bar.component";
 
 const App = () => {
   //// Hooks
@@ -43,9 +45,11 @@ const App = () => {
   /// Return
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <AppBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          {/* <Home /> */}
+          <NewHomePage />
         </Route>
         <Route exact path="/about">
           <About />
@@ -86,14 +90,20 @@ export default App;
 //// 27) BUG - after logging in, the  slected location won't turn into favorite - DONE
 //// BUG 28)  after adding a new one all colapsed ones will open again - DONE
 ///// 29) remove libs that you don't need
-///// 30) go on react-native 
+///// 30) go on react-native
 ////// 31) change time to 2am, 8pm - DONE
 ////// 32) yellow = no rain, blue rainny - DONE
 ////// 33) remove 12am to 6am - DONE
-/////// 34) make initial and user-location load at the same time 
-////// 35) css .....
+/////// 34) make initial and user-location load at the same time
 /*
-35.1) change garnadge-bin to an "X" DONE
-35.2) tage today's row as today not its date
+35) css .....
+35.1) change garnadge-bin to an "X" - DONE
+35.2) tage today's row as today not its date - DONE
+36.3) make temp in forecast card bolder that time - DONE
 */
 //// 36) bug current time is wrong - DONE
+///// 37) remove tabs - DONE
+/////// 38) move map to the last searched place
+///// 39) add navbar and remove favirotes tab - DONE
+////// 40) move searchTab stuff to newHome page - DONE
+///// 41) add side panel and about - login/out page ......

@@ -5,13 +5,12 @@ import _ClockLoader from "react-spinners/ClockLoader";
 const override = css`
   display: block;
   margin: 5px auto;
-  border-color: red;
 `;
 
 const ClockLoader = () => {
   /// Return
   return (
-    <_ClockLoader css={override} size={40} color={"#123abc"} loading={true} />
+    <_ClockLoader css={override} size={40} color={"white"} loading={true} />
   );
 };
 export default ClockLoader;

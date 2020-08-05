@@ -14,7 +14,7 @@ const ForecastCard = (props) => {
       style={{ backgroundColor: isRainy ? "lightBlue" : "#f6f467" }}
     >
       <span>{timeOfDay}</span>
-      <span>{temp} &#8451;</span>
+      <span className={styles.temp}>{temp} &#8451;</span>
 
       <img
         className={styles.icon}
