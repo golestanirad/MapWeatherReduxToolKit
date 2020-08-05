@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/MapWeatherReduxToolKit/static/css/main.da7936d2.chunk.css",
-    "main.js": "/MapWeatherReduxToolKit/static/js/main.918ea186.chunk.js",
-    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.918ea186.chunk.js.map",
+    "main.js": "/MapWeatherReduxToolKit/static/js/main.6150d327.chunk.js",
+    "main.js.map": "/MapWeatherReduxToolKit/static/js/main.6150d327.chunk.js.map",
     "runtime-main.js": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js",
     "runtime-main.js.map": "/MapWeatherReduxToolKit/static/js/runtime-main.78ef3a93.js.map",
-    "static/js/2.9fa9e03d.chunk.js": "/MapWeatherReduxToolKit/static/js/2.9fa9e03d.chunk.js",
-    "static/js/2.9fa9e03d.chunk.js.map": "/MapWeatherReduxToolKit/static/js/2.9fa9e03d.chunk.js.map",
+    "static/js/2.8fc146bb.chunk.js": "/MapWeatherReduxToolKit/static/js/2.8fc146bb.chunk.js",
+    "static/js/2.8fc146bb.chunk.js.map": "/MapWeatherReduxToolKit/static/js/2.8fc146bb.chunk.js.map",
     "index.html": "/MapWeatherReduxToolKit/index.html",
-    "precache-manifest.bc5f84f4d443f02c432e68b8cf425c78.js": "/MapWeatherReduxToolKit/precache-manifest.bc5f84f4d443f02c432e68b8cf425c78.js",
+    "precache-manifest.3d25ade2b16bd5f759a19d61e2644525.js": "/MapWeatherReduxToolKit/precache-manifest.3d25ade2b16bd5f759a19d61e2644525.js",
     "service-worker.js": "/MapWeatherReduxToolKit/service-worker.js",
     "static/css/main.da7936d2.chunk.css.map": "/MapWeatherReduxToolKit/static/css/main.da7936d2.chunk.css.map",
-    "static/js/2.9fa9e03d.chunk.js.LICENSE.txt": "/MapWeatherReduxToolKit/static/js/2.9fa9e03d.chunk.js.LICENSE.txt"
+    "static/js/2.8fc146bb.chunk.js.LICENSE.txt": "/MapWeatherReduxToolKit/static/js/2.8fc146bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.78ef3a93.js",
-    "static/js/2.9fa9e03d.chunk.js",
+    "static/js/2.8fc146bb.chunk.js",
     "static/css/main.da7936d2.chunk.css",
-    "static/js/main.918ea186.chunk.js"
+    "static/js/main.6150d327.chunk.js"
   ]
 }
